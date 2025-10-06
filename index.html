@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Form Pendaftaran Mahasiswa Baru</h1>
+
+    <form id="formPendaftaran">
+      <!-- DATA PRIBADI -->
+      <fieldset>
+        <legend>Data Pribadi</legend>
+        <label>Nama Lengkap:</label>
+        <input type="text" id="nama" required />
+
+        <label>NIK:</label>
+        <input type="text" id="nik" required />
+
+        <label>Tempat Lahir:</label>
+        <input type="text" id="tempatLahir" required />
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" id="tanggalLahir" required />
+
+        <label>Jenis Kelamin:</label>
+        <select id="jenisKelamin" required>
+          <option value="">-- Pilih --</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+
+        <label>Alamat:</label>
+        <input type="text" id="alamat" required />
+
+        <label>Nomor HP / WhatsApp:</label>
+        <input type="tel" id="noHp" required />
+
+        <label>Email:</label>
+        <input type="email" id="email" required />
+      </fieldset>
+
+      <!-- DATA ORANG TUA -->
+      <fieldset>
+        <legend>Data Orang Tua / Wali</legend>
+        <label>Nama Ayah:</label>
+        <input type="text" id="namaAyah" required />
+
+        <label>Pekerjaan Ayah:</label>
+        <input type="text" id="pekerjaanAyah" required />
+
+        <label>Nama Ibu:</label>
+        <input type="text" id="namaIbu" required />
+
+        <label>Pekerjaan Ibu:</label>
+        <input type="text" id="pekerjaanIbu" required />
+
+        <label>Alamat Orang Tua:</label>
+        <input type="text" id="alamatOrtu" required />
+
+        <label>Nomor HP Orang Tua / Wali:</label>
+        <input type="tel" id="noHpOrtu" required />
+      </fieldset>
+
+      <!-- DATA AKADEMIK -->
+      <fieldset>
+        <legend>Data Akademik</legend>
+        <label>Asal Sekolah:</label>
+        <input type="text" id="asalSekolah" required />
+
+        <label>Tahun Lulus:</label>
+        <input type="text" id="tahunLulus" required />
+
+        <label>Jurusan Sekolah:</label>
+        <input type="text" id="jurusanSekolah" required />
+
+        <label>Upload Foto Ijazah Sekolah:</label>
+        <input type="file" id="fotoIjazah" accept="image/*" required />
+
+        <label>Upload Foto Transkrip Nilai:</label>
+        <input type="file" id="fotoTranskrip" accept="image/*" required />
+
+        <label>Fakultas yang Dipilih:</label>
+        <select id="fakultas" required>
+          <option value="">-- Pilih Fakultas --</option>
+          <option value="Teknologi Informasi">Teknologi Informasi</option>
+          <option value="Ekonomi dan Bisnis">Ekonomi dan Bisnis</option>
+          <option value="Teknik">Teknik</option>
+          <option value="Ilmu Sosial dan Politik">Ilmu Sosial dan Politik</option>
+          <option value="Hukum">Hukum</option>
+          <option value="Kesehatan">Kesehatan</option>
+          <option value="Keguruan dan Ilmu Pendidikan">Keguruan dan Ilmu Pendidikan</option>
+          <option value="Seni dan Desain">Seni dan Desain</option>
+          <option value="Psikologi">Psikologi</option>
+        </select>
+
+        <label>Program Studi yang Dipilih:</label>
+        <select id="prodi" required>
+          <option value="">-- Pilih Program Studi --</option>
+        </select>
+      </fieldset>
+
+      <!-- BERKAS DAN PERNYATAAN -->
+      <fieldset>
+        <legend>Berkas & Pernyataan</legend>
+        <label>Upload Pas Foto:</label>
+        <input type="file" id="pasFoto" accept="image/*" required />
+
+        <label>Jalur Pendaftaran:</label>
+        <select id="jalur" required>
+          <option value="">-- Pilih Jalur --</option>
+          <option value="Reguler">Reguler</option>
+          <option value="Beasiswa">Beasiswa</option>
+          <option value="Prestasi">Prestasi</option>
+        </select>
+
+        <label>Alasan Memilih Program Studi:</label>
+        <textarea id="alasan" required></textarea>
+
+        <label class="check">
+          <input type="checkbox" id="setuju" required />
+          Saya menyatakan data yang saya isi adalah benar.
+        </label>
+      </fieldset>
+
+      <button type="reset" class="btn-reset">Kosongkan Formulir</button>
+      <button type="submit" class="btn-submit">Daftar</button>
+    </form>
+
+    <div id="hasilPendaftaran" class="hidden">
+      <h2>Data Pendaftar</h2>
+      <div id="output"></div>
+      <button id="btnKembali">Kembali ke Form</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
